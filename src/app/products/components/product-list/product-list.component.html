@@ -1,0 +1,16 @@
+<div>
+    <h1>{{ title }}</h1>
+    <ul>
+        <li (click)="selectedProduct = 'Webcam'">Webcam</li>
+        <li (click)="selectedProduct = 'Microphone'">Microphone</li>
+        <li (click)="selectedProduct = 'Wireless Keyboard'">
+            Wireless Keyboard
+        </li>
+    </ul>
+    <app-product-detail
+        #product
+        [name]="selectedProduct"
+        (bought)="onBuy($event)">
+        
+    </app-product-detail>
+</div>
