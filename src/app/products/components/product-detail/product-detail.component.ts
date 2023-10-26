@@ -13,7 +13,7 @@ export class ProductDetailComponent {
 
   @Input() name:string = "";
   @Output() bought:EventEmitter<any> = new EventEmitter();
-  title:string = "Product Detail"
+  title:string = "Product Details"
 
   buy(product:string): void {
     this.bought.emit(product)
